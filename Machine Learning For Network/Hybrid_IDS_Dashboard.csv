@@ -1,0 +1,40 @@
+Category,Metric,Value
+Dataset,Total Test Samples,556494.0
+Dataset,Benign Samples,455546.0
+Dataset,Attack Samples,100948.0
+Dataset,Detected Anomalies,199486.0
+Dataset,Normal Traffic,357008.0
+Performance,Accuracy,0.7888
+Performance,Precision,0.4584
+Performance,Recall,0.9059
+Performance,F1 Score,0.6088
+Performance,Balanced Accuracy,0.8344
+Performance,Detection Rate,0.9059
+Performance,Specificity,0.7628
+Performance,False Positive Rate,0.2372
+Performance,False Negative Rate,0.0941
+Confusion Matrix,True Positives,91449.0
+Confusion Matrix,True Negatives,347509.0
+Confusion Matrix,False Positives,108037.0
+Confusion Matrix,False Negatives,9499.0
+Attack Distribution,Botnet,93.0
+Attack Distribution,Brute Force,579.0
+Attack Distribution,DDoS,38365.0
+Attack Distribution,DoS,52189.0
+Attack Distribution,Infiltration,6.0
+Attack Distribution,PortScan,212.0
+Attack Distribution,Web Attack,5.0
+Ground Truth,Botnet,431.0
+Ground Truth,Brute Force,2745.0
+Ground Truth,DDoS,38404.0
+Ground Truth,DoS,58124.0
+Ground Truth,Infiltration,11.0
+Ground Truth,PortScan,587.0
+Ground Truth,Web Attack,643.0
+Per-Class Recall,Botnet,0.1949
+Per-Class Recall,Brute Force,0.208
+Per-Class Recall,DDoS,0.9967
+Per-Class Recall,DoS,0.8972
+Per-Class Recall,Infiltration,0.5455
+Per-Class Recall,PortScan,0.3475
+Per-Class Recall,Web Attack,0.0047
