@@ -19,7 +19,136 @@ Analytical SQL queries were developed to extract cybersecurity insights, includi
 
 ## Machine Learning And Model Generation
 
-Machine learning was implemented using Scikit-learn to detect malicious network traffic patterns. Individual attack datasets were combined into a master dataset after validating a consistent schema across all files. Feature engineering techniques, including logarithmic transformations, interaction-based features, and network traffic metrics, were applied to improve model performance. The data was standardized using StandardScaler, and an Isolation Forest model was trained for anomaly detection.
+### Hybrid Intrusion Detection System
+Overview
+
+This module integrates the Isolation Forest anomaly detection model with the XGBoost multi-class attack classifier to create a complete Hybrid Intrusion Detection System (HIDS).
+
+The pipeline follows a two-stage detection architecture:
+
+1.Isolation Forest identifies anomalous network traffic.
+2. XGBoost classifies detected anomalies into specific cyber-attack categories.
+
+This design reduces computational overhead by allowing only suspicious traffic to be processed by the supervised classifier.
+### Project Workflow:
+```
+Raw Network Traffic
+        │
+        ▼
+Feature Engineering
+        │
+        ▼
+Isolation Forest
+ (Normal / Anomaly)
+        │
+        ├──────────────► Normal Traffic
+        │
+        ▼
+XGBoost Classifier
+        │
+        ▼
+Attack Classification
+(Botnet, DoS, DDoS, Brute Force,
+PortScan, Infiltration, Web Attack)
+        │
+        ▼
+Hybrid IDS Results
+```
+### Project Structure:
+```
+Notebook_1_IsolationForest.ipynb
+│
+├── Feature Engineering
+├── Anomaly Detection
+├── Model Training
+├── Evaluation
+└── isolation_forest.pkl
+
+Notebook_2_XGBoost_Classifier.ipynb
+│
+├── Attack Dataset Preparation
+├── Feature Scaling
+├── XGBoost Training
+├── Multi-class Evaluation
+└── xgboost_classifier.pkl
+
+Notebook_3_Integration.ipynb
+│
+├── Load Saved Models
+├── Hybrid Detection Pipeline
+├── Final Evaluation
+├── CSV Generation
+└── Dashboard Dataset Creation
+```
+### Generated Files
+Model Files
+```
+isolation_forest.pkl
+xgboost_classifier.pkl
+xgboost_scaler.pkl
+label_encoder.pkl
+```
+### Output Files
+```
+Hybrid_IDS_Results.csv
+```
+Contains prediction results for every network flow.
+
+### Columns include:
+
+* True_Label
+* IsolationForest
+* Final_Prediction
+* Binary_Prediction
+
+```
+Hybrid_IDS_Dashboard.csv
+```
+Contains summarized performance metrics for dashboard visualization.
+
+### Metrics include:
+
+* Total Test Samples
+* Benign Samples
+* Attack Samples
+* Detected Anomalies
+* Accuracy
+* Precision
+* Recall
+* F1 Score
+* Detection Rate
+* False Positive Rate
+* False Negative Rate
+* Attack Distribution
+* Attack Categories
+
+The classifier predicts the following attack types:
+
+* Botnet
+* Brute Force
+* DDoS
+* DoS
+* Infiltration
+* PortScan
+* Web Attack
+
+| Stage   | Algorithm        | Purpose                   |
+| ------- | ---------------- | ------------------------- |
+| Stage 1 | Isolation Forest | Detect anomalous traffic  |
+| Stage 2 | XGBoost          | Classify detected attacks |
+
+### Evaluation Metrics
+
+The Hybrid IDS is evaluated using:
+
+* Accuracy
+* Precision
+* Recall
+* F1 Score
+* Detection Rate
+* False Positive Rate
+* False Negative Rate
+* Multi-Class Confusion Matrix
 
 The model was evaluated using Confusion Matrix, Classification Report, Accuracy Score, ROC Curve, ROC-AUC Score, and Anomaly Score Distribution.
 
