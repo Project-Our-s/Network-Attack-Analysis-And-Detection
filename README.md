@@ -160,7 +160,7 @@ Page 1 – Executive Security Overview
 *  Displays key security KPIs including Total Flows, Total Attacks, Benign Flows, Attack Rate, and Attack Types.
 *  Provides traffic classification, protocol distribution, and attack distribution with interactive filters for traffic type, protocol, and attack labels.
 
-  ![Bi_page1](images/"Dashboard Image1.png")
+  ![Bi_page1]("images/Dashboard Image1.png")
 
 Page 2 – Network Traffic Analysis
 *  Analyzes network behavior across different attack categories.
