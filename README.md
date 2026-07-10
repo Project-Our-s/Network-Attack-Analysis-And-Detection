@@ -175,3 +175,7 @@ Page 4 – Live Threat Detection Simulator
 * Demonstrates a simulated real-time threat detection system using engineered network traffic features.
 *  Displays anomaly alerts and simulated risk scores, illustrating how suspicious network behavior can be identified using machine learning.
  ![Bi_page1](images/Dashboard_Image4.png)
+
+## Future Improvements
+
+Future enhancements will focus on developing a standalone desktop/web application that integrates the Hybrid IDS with an AI-powered cybersecurity assistant. The application will provide real-time threat analysis, explain detected attack types, assess their severity, and recommend preventive measures and mitigation strategies. Additional features such as live network monitoring, automated alerts, and an interactive dashboard can further improve the system's usability for real-world cybersecurity applications.
