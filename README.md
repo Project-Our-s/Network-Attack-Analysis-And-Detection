@@ -1,23 +1,23 @@
-# Network-Attack-Analysis-And-Detection
+# 🔍Network-Attack-Analysis-And-Detection
 
 ## Introduction
 
 This project utilizes the CIC-IDS2017dataset, a widely used benchmark for network intrusion detection, containing both normal and malicious network traffic. The dataset was downloaded from GitHub and includes attack categories such as Botnet, DDoS, DoS, Brute Force, Web Attack, Port Scan, and Infiltration. The original Parquet files were converted to CSV for easier processing. Instead of merging all datasets into a single file, each attack dataset was analyzed independently to improve processing efficiency and perform detailed attack-specific analysis, with the primary focus on malicious network traffic.
 
-## Link to Dataset:
+## 🔗 Link to Dataset:
 https://drive.google.com/drive/folders/1cjXSuQ8_8Fisb784PJyv_gZCthkEfyLB?usp=sharing
 
-## Analysis part
+## 📒Analysis part
 
 Data analysis was performed in Python (VS Code) using Pandas, NumPy, Matplotlib, and Seaborn. Each attack dataset was analyzed individually to explore its structure, validate data quality, examine attack distributions, and understand key network traffic characteristics. Exploratory Data Analysis (EDA) included statistical summaries, feature distributions, correlation analysis, and visualizations such as histograms, box plots, violin plots, and heatmaps. For selected datasets, feature engineering was performed to derive additional network traffic metrics and enhance analytical insights into attack behavior.
 
 
-##  SQL Engine :
+## 🔢 SQL Engine :
 
 PostgreSQL was used to organize and analyze the network traffic datasets. Separate tables were created for each attack category to enable independent analysis and efficient query execution.
 Analytical SQL queries were developed to extract cybersecurity insights, including executive security metrics, multi-stage attack timelines, high-risk threat hunting, network behavior segmentation, and feature profiling. These queries supported the identification of attack patterns and provided structured insights for dashboard development.
 
-## Machine Learning And Model Generation
+## 🖥️Machine Learning And Model Generation
 
 ### Hybrid Intrusion Detection System
 Overview
@@ -80,7 +80,7 @@ Notebook_3_Integration.ipynb
 ├── CSV Generation
 └── Dashboard Dataset Creation
 ```
-### Generated Files
+### 📂Generated Files
 Model Files
 ```
 isolation_forest.pkl
@@ -88,13 +88,13 @@ xgboost_classifier.pkl
 xgboost_scaler.pkl
 label_encoder.pkl
 ```
-### Output Files
+### 📂Output Files
 ```
 Hybrid_IDS_Results.csv
 ```
 Contains prediction results for every network flow.
 
-### Columns include:
+### ➡️Columns include:
 
 * True_Label
 * IsolationForest
@@ -106,7 +106,7 @@ Hybrid_IDS_Dashboard.csv
 ```
 Contains summarized performance metrics for dashboard visualization.
 
-### Metrics include:
+### ➡️Metrics include:
 
 * Total Test Samples
 * Benign Samples
@@ -152,7 +152,7 @@ The Hybrid IDS is evaluated using:
 
 The model was evaluated using Confusion Matrix, Classification Report, Accuracy Score, ROC Curve, ROC-AUC Score, and Anomaly Score Distribution.
 
-## Bi Dashboard
+## 📊 Bi Dashboard
 An interactive Power BI dashboard was developed to transform complex network traffic data into actionable cybersecurity insights. The dashboard consists of four analytical pages, allowing users to monitor attack trends, analyze network behavior, evaluate protocol-level characteristics, and simulate live threat detection.
 
 
@@ -176,6 +176,6 @@ Page 4 – Live Threat Detection Simulator
 *  Displays anomaly alerts and simulated risk scores, illustrating how suspicious network behavior can be identified using machine learning.
  ![Bi_page1](images/Dashboard_Image4.png)
 
-## Future Improvements
+## ⭐Future Improvements
 
 Future enhancements will focus on developing a standalone desktop/web application that integrates the Hybrid IDS with an AI-powered cybersecurity assistant. The application will provide real-time threat analysis, explain detected attack types, assess their severity, and recommend preventive measures and mitigation strategies. Additional features such as live network monitoring, automated alerts, and an interactive dashboard can further improve the system's usability for real-world cybersecurity applications.
